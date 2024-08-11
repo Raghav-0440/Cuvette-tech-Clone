@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuvette</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .left-side {
+            width: 40%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .right-side {
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .social-link {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 10px 20px;
+            color: #777;
+        }
+
+        .right-side h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0069d9;
+        }
+
+        .google-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-button:hover {
+            background-color: #f2f2f2;
+        }
+
+        .google-icon {
+            margin-right: 10px;
+        }
+
+        .create-account {
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .create-account a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .switch-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .switch-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .switch-button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Find your dream job!</h1>
+            <p>Trusted by 300000+ students</p>
+            <div class="logos">
+                <img src="airtel.png" alt="Airtel" class="logo">
+                <img src="tata.png" alt="Tata" class="logo">
+                <img src="nference.png" alt="nference" class="logo">
+                <img src="bms.png" alt="BookMyShow" class="logo">
+                <img src="myntra.png" alt="Myntra" class="logo">
+                <img src="ta.png" alt="TripAdvisor" class="logo">
+                <img src="kuku.png" alt="Kuku FM" class="logo">
+                <img src="spiny.png" alt="Spinny" class="logo">
+                <img src="cd.jpg" alt="CarDekho" class="logo">
+                <img src="medi.png" alt="MediBuddy" class="logo">
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <i class="stat-icon fa fa-briefcase"></i>
+                    <div class="stat-text">7000 + Jobs</div>
+                </div>
+                <div class="stat">
+                    <i class="stat-icon fa fa-money-bill-wave"></i>
+                    <div class="stat-text">18K + Avg. Stipend</div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <i class="stat-icon fa fa-building"></i>
+                    <div class="stat-text">6000 + Companies</div>
+                </div>
+                <div class="stat">
+                    <i class="stat-icon fa fa-check-circle"></i>
+                    <div class="stat-text">100% Verified Jobs</div>
+                </div>
+            </div>
+            <div class="social-links">
+                <i class="social-link fa fa-instagram"></i>
+                <i class="social-link fa fa-linkedin"></i>
+                <i class="social-link fa fa-youtube"></i>
+            </div>
+            <div class="footer">
+                © Cuvette 2024 | Terms of Service
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="switch-container">
+                <button id="userLogin" class="switch-button active" onclick="setLoginType('user')">User Login</button>
+                <button id="adminLogin" class="switch-button" onclick="setLoginType('admin')">Admin Login</button>
+            </div>
+            <h2>SIGN IN</h2>
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-input" placeholder="Enter Password" required>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <button type="submit" class="button" onclick="login()">Login</button>
+            <button class="google-button">
+                <i class="google-icon fa fa-google"></i>
+                Login with Google
+            </button>
+            <div class="create-account">
+                New to Cuvette? <a href="#">Create an account</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const defaultCredentials = {
+            user: {
+                email: 'user@user.com',
+                password: 'user'
+            },
+            admin: {
+                email: 'admin@admin.com',
+                password: 'admin'
+            }
+        };
+
+        let currentLoginType = 'user';
+
+        function setLoginType(type) {
+            currentLoginType = type;
+            document.getElementById('email').value = defaultCredentials[type].email;
+            document.getElementById('password').value = defaultCredentials[type].password;
+
+            document.getElementById('userLogin').classList.toggle('active', type === 'user');
+            document.getElementById('adminLogin').classList.toggle('active', type === 'admin');
+        }
+
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === defaultCredentials[currentLoginType].email && password === defaultCredentials[currentLoginType].password) {
+                alert(`${currentLoginType.charAt(0).toUpperCase() + currentLoginType.slice(1)} Login Successful!`);
+                window.location.href = currentLoginType === 'user' ? 'jobs.html' : 'admin.html';
+            } else {
+                alert('Invalid credentials, please try again.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setLoginType('user');
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

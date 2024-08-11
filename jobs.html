@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuvette Jobs</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: inline-block;
+      width: 200px;
+      height: 50px;
+      background-image: url("cuvette.jpeg"); /* Replace with your actual logo image URL */
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .logout-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #ff4d4d; /* Red button */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #007bff; /* Blue button */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .job-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .job-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .job-card h2 {
+      margin: 0 0 10px;
+    }
+
+    .job-card p {
+      margin: 5px 0;
+    }
+
+    .job-card button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .job-card button.apply {
+      background-color: #28a745; /* Green button */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <button class="logout-button" onclick="logout()">Logout</button>
+  </header>
+
+  <nav>
+    <button class="button" onclick="showFullTimeJobs()">Full Time Jobs</button>
+    <button class="button" onclick="showAppliedJobs()">Applied Jobs</button>
+  </nav>
+
+  <main>
+    <div class="job-list" id="job-list">
+      <!-- Jobs will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <script>
+    let appliedJobs = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadJobs();
+    });
+
+    function loadJobs() {
+      const jobList = document.getElementById('job-list');
+      const jobs = JSON.parse(localStorage.getItem('jobs')) || [];
+      jobList.innerHTML = '';
+      jobs.forEach(job => {
+        jobList.innerHTML += `
+          <div class="job-card">
+            <h2>${job.title}</h2>
+            <p>${job.company}</p>
+            <button class="apply" onclick="applyForJob('${job.title}', '${job.company}')">Apply</button>
+          </div>
+        `;
+      });
+    }
+
+    function showAppliedJobs() {
+      const jobList = document.getElementById('job-list');
+      jobList.innerHTML = '';
+      appliedJobs.forEach(job => {
+        jobList.innerHTML += `
+          <div class="job-card">
+            <h2>${job.title}</h2>
+            <p>${job.company}</p>
+            <button class="apply" disabled>Applied</button>
+          </div>
+        `;
+      });
+    }
+
+    function applyForJob(title, company) {
+      const job = { title, company };
+      appliedJobs.push(job);
+      alert('Applied for job successfully');
+    }
+
+    function logout() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
